@@ -1,0 +1,51 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+#contenido{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+#cuenta{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+#cuenta label{
+    text-align: left;
+    font-weight: bold;
+}
+#cuenta input{
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#cuenta button{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #10205B;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #10205B;
+}
