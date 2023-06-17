@@ -36,7 +36,7 @@ selectBtn.forEach(btn => {
             name: window.subjName,
             teacher: e.target.parentNode.children[0].innerText,
             hour: e.target.parentNode.children[1].innerText,
-            classroom: e.target.parentNode.children[2].innerText, 
+            classroom: e.target.parentNode.children[2].innerText,
             group: e.target.parentNode.children[3].innerText
         }
 
@@ -50,30 +50,44 @@ function renderSubject(subject) {
 
     let newSubjectRow = subjectTable.insertRow(-1);
 
-    newSubjectRow.setAttribute('data-subject-id',subject["id"]);
+    newSubjectRow.setAttribute('data-subject-id', subject["id"]);
 
-    insertCellTable(newSubjectRow,subject["id"]);
-    insertCellTable(newSubjectRow,subject["name"]);
-    insertCellTable(newSubjectRow,subject["hour"]);
-    insertCellTable(newSubjectRow,subject["classroom"]);
-    insertCellTable(newSubjectRow,subject["group"]);
+    insertCellTable(newSubjectRow, subject["id"]);
+    insertCellTable(newSubjectRow, subject["name"]);
+    insertCellTable(newSubjectRow, subject["hour"]);
+    insertCellTable(newSubjectRow, subject["classroom"]);
+    insertCellTable(newSubjectRow, subject["group"]);
 
     let removeCell = newSubjectRow.insertCell(5);
     let btnRemove = document.createElement('button');
     let removeContent = document.createTextNode('Delete');
 
     btnRemove.appendChild(removeContent);
-    btnRemove.setAttribute('class','btn-remove');
+    btnRemove.setAttribute('class', 'btn-remove');
     removeCell.appendChild(btnRemove);
 
-    btnRemove.addEventListener('click', e => removeSubject(e));
+    btnRemove.addEventListener('click', e => removeCellTable(e));
+
+    removeSubject(window.subjId);
 }
 
-function insertCellTable(newSubjectRow,subject){
+function insertCellTable(newSubjectRow, subject) {
     let newSubjectCell = newSubjectRow.insertCell(-1);
     newSubjectCell.textContent = subject;
 }
 
-function removeSubject(e) {
+function removeCellTable(e) {
     e.target.parentNode.parentNode.remove();
+}
+
+function removeSubject(id) {
+    console.log(id)
+
+    let subjects = Array.from(document.getElementsByClassName('materias'));
+
+    subjects.forEach(subj => (Array.from(subj.children).forEach(subj => {
+        if (id === subj.getAttribute("id")) {
+            subj.remove();
+        }
+    })))
 }
