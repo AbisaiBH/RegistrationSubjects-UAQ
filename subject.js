@@ -7,11 +7,17 @@ let selectBtn = Array.from(document.getElementsByClassName('btn-select'));
 
 subjects.forEach(subj => {
     subj.addEventListener('click', (e) => {
-        modal.style.display = 'block';
+        let subjNameModal = document.getElementById('nombreMatModal');
+        let subjIdModal = document.getElementById('claveMatModal');
 
         // console.log(e.target.getAttribute("id"))
         let subjName = e.target.children[0].innerText;
         window.subjName = subjName;
+
+        subjNameModal.innerText = subjName;
+        subjIdModal.innerText = e.target.getAttribute("id");
+
+        modal.style.display = 'block';
     })
 })
 
