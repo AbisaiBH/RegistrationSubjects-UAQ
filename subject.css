@@ -184,3 +184,7 @@ footer{
     justify-content: space-around;
     gap: 1rem;
 }
+
+.modal .horarios .horario > p {
+    width: 100%;
+}
