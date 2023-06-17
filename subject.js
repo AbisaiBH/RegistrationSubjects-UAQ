@@ -1,28 +1,31 @@
-let subjects = Array.from(document.getElementsByClassName('subj'));
+updateData();
+
+function updateData() {
+    let subjects = Array.from(document.getElementsByClassName('subj'));
+    subjects.forEach(subj => subj.addEventListener('click', e => openModal(e)))
+}
 
 let modal = document.getElementById('modal');
 let closeBtn = document.getElementById('btn-close');
 
 let selectBtn = Array.from(document.getElementsByClassName('btn-select'));
 
-subjects.forEach(subj => {
-    subj.addEventListener('click', (e) => {
-        let subjNameModal = document.getElementById('nombreMatModal');
-        let subjIdModal = document.getElementById('claveMatModal');
+function openModal(e) {
+    let subjNameModal = document.getElementById('nombreMatModal');
+    let subjIdModal = document.getElementById('claveMatModal');
 
-        // console.log(e.target.getAttribute("id"))
-        let subjName = e.target.children[0].innerText;
-        window.subjName = subjName;
+    // console.log(e.target.getAttribute("id"))
+    let subjName = e.target.children[0].innerText;
+    window.subjName = subjName;
 
-        let subjId = e.target.getAttribute("id");
-        window.subjId = subjId;
+    let subjId = e.target.getAttribute("id");
+    window.subjId = subjId;
 
-        subjNameModal.innerText = subjName;
-        subjIdModal.innerText = e.target.getAttribute("id");
+    subjNameModal.innerText = subjName;
+    subjIdModal.innerText = e.target.getAttribute("id");
 
-        modal.style.display = 'block';
-    })
-})
+    modal.style.display = 'block';
+}
 
 closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
@@ -66,9 +69,12 @@ function renderSubject(subject) {
     btnRemove.setAttribute('class', 'btn-remove');
     removeCell.appendChild(btnRemove);
 
-    btnRemove.addEventListener('click', e => removeCellTable(e));
+    btnRemove.addEventListener('click', e => {
+        removeCellTable(e);
+        addSubjectNode(subject["id"], subject["name"]);
+    })
 
-    removeSubject(window.subjId);
+    removeSubjectNode(window.subjId);
 }
 
 function insertCellTable(newSubjectRow, subject) {
@@ -80,9 +86,28 @@ function removeCellTable(e) {
     e.target.parentNode.parentNode.remove();
 }
 
-function removeSubject(id) {
-    console.log(id)
+function addSubjectNode(id, name) {
+    let subjects = Array.from(document.getElementsByClassName('materias'));
 
+    let subjNode = document.createElement('button');
+    subjNode.setAttribute('class', 'subj');
+    subjNode.setAttribute('id', id);
+
+    let subjName = document.createElement('p');
+    subjName.innerText = name;
+
+    let subjId = document.createElement('p');
+    subjId.innerText = id;
+
+    subjNode.appendChild(subjName);
+    subjNode.appendChild(subjId);
+
+    subjects[0].appendChild(subjNode);
+
+    updateData();
+}
+
+function removeSubjectNode(id) {
     let subjects = Array.from(document.getElementsByClassName('materias'));
 
     subjects.forEach(subj => (Array.from(subj.children).forEach(subj => {
