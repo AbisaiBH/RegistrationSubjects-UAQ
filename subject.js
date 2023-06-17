@@ -14,6 +14,9 @@ subjects.forEach(subj => {
         let subjName = e.target.children[0].innerText;
         window.subjName = subjName;
 
+        let subjId = e.target.getAttribute("id");
+        window.subjId = subjId;
+
         subjNameModal.innerText = subjName;
         subjIdModal.innerText = e.target.getAttribute("id");
 
@@ -29,7 +32,7 @@ selectBtn.forEach(btn => {
     btn.addEventListener('click', (e) => {
 
         let subject = {
-            id: 1,
+            id: window.subjId,
             name: window.subjName,
             teacher: e.target.parentNode.children[0].innerText,
             hour: e.target.parentNode.children[1].innerText,
@@ -47,16 +50,30 @@ function renderSubject(subject) {
 
     let newSubjectRow = subjectTable.insertRow(-1);
 
-    newSubjectRow.setAttribute('data-subject-id',subject["subjectId"]);
+    newSubjectRow.setAttribute('data-subject-id',subject["id"]);
 
     insertCellTable(newSubjectRow,subject["id"]);
     insertCellTable(newSubjectRow,subject["name"]);
     insertCellTable(newSubjectRow,subject["hour"]);
     insertCellTable(newSubjectRow,subject["classroom"]);
     insertCellTable(newSubjectRow,subject["group"]);
+
+    let removeCell = newSubjectRow.insertCell(5);
+    let btnRemove = document.createElement('button');
+    let removeContent = document.createTextNode('Delete');
+
+    btnRemove.appendChild(removeContent);
+    btnRemove.setAttribute('class','btn-remove');
+    removeCell.appendChild(btnRemove);
+
+    btnRemove.addEventListener('click', e => removeSubject(e));
 }
 
 function insertCellTable(newSubjectRow,subject){
     let newSubjectCell = newSubjectRow.insertCell(-1);
     newSubjectCell.textContent = subject;
+}
+
+function removeSubject(e) {
+    e.target.parentNode.parentNode.remove();
 }
