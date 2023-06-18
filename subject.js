@@ -110,6 +110,8 @@ function addNewRow(table, subject) {
 
     // Agregar nueva celda con las acciones (editar, borrar)
     insertActionsCell(subject, newSubjectRow);
+
+    showHideSubmit();
 }
 
 // INSERTAR CONTENIDO A LA CELDA DE LA NUEVA MATERIA EN LA TABLA
@@ -169,6 +171,8 @@ function insertActionsCell(subject, newSubjectRow) {
 // ELIMINAR MATERIA DE LA TABLA
 function removeRowTable(e) {
     e.target.parentNode.parentNode.remove();
+
+    showHideSubmit();
 }
 
 // AGREGAR MATERIA ELIMINADA DE LA TABLA A LAS OPCIONES DE MATERIAS
@@ -217,4 +221,16 @@ closeBtn.addEventListener('click', () => {
 
 function closeModal() {
     modal.style.display = 'none';
+}
+
+
+function showHideSubmit() {
+    let btnSubmit = document.getElementById('btn-submit');
+    let table = document.getElementById('subjects');
+
+    // Obtener # de filas de la tabla
+    let rowsLength = table.rows.length;
+
+    if(rowsLength > 2) btnSubmit.style.display = 'block';
+    else btnSubmit.style.display = 'none';
 }

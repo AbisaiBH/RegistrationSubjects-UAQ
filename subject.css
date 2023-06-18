@@ -134,6 +134,9 @@ section #barMat{
     /* border-bottom: solid 1px rgba(255,255,255,0.1); */
     border: 1px groove #10205b3b;
 }
+#btn-submit {
+    display: none;
+}
 header{
     position: fixed;
     top: 0;
@@ -187,4 +190,8 @@ footer{
 
 .modal .horarios .horario > p {
     width: 100%;
+}
+
+#ghost {
+    display: none;
 }
