@@ -109,7 +109,7 @@ function addNewRow(table, subject) {
     insertCellTable(newSubjectRow, subject["group"]);
 
     // Agregar nueva celda con las acciones (editar, borrar)
-    insertActionsCell();
+    insertActionsCell(newSubjectRow);
 }
 
 // INSERTAR CONTENIDO A LA CELDA DE LA NUEVA MATERIA EN LA TABLA
@@ -120,7 +120,7 @@ function insertCellTable(newSubjectRow, subject) {
 }
 
 // AGREGAR CELDA DE OPCIONES (EDITAR, BORRAR) EN LA MATERIA AGREGADA A LA TABLA
-function insertActionsCell() {
+function insertActionsCell(newSubjectRow) {
     // Crear nueva celda
     let actionsCell = newSubjectRow.insertCell(5);
 
