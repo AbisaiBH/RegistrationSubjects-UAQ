@@ -1,0 +1,100 @@
+@import 'global.css';
+
+.container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background: #023a75;
+    padding-top: 1%;
+}
+
+.container-login {
+    background-color: #f4f5f6;
+    width: 40%;
+    padding-left: 3.5rem;
+}
+
+.container-login .row {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0;
+    /* transform: translateX(50px); */
+    justify-content: start;
+    gap: 1rem;
+}
+
+.container-login .row .thumb {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.container-login .row .thumb img {
+    width: 100px;
+    height: 126px;
+}
+
+.container-login .title--main {
+    margin: 0;
+    text-align: left;
+    font-size: 50px;
+    color: #114ea3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form {
+    width: 50%;
+    /* padding: 0 2.5rem; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    /* transform: translateX(50px); */
+}
+
+.form>* {
+    width: 100% !important;
+}
+
+.form>input,
+button {
+    padding: 10px 15px;
+    border-radius: 3px !important;
+}
+
+.form>input {
+    border: 1px solid #cfcfcf;
+    font-size: 15px;
+}
+
+.form>input:focus {
+    border: none !important;
+}
+
+.form>button {
+    background-color: #114ea3;
+}
+
+.btn-inline {
+    width: 50%;
+}
+
+.btn-inline:hover {
+    background-color: transparent;
+    color: #114ea3;
+}
+
+.container-img {
+    width: 60%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.535), rgba(0, 0, 0, 0.453)), url(https://inqro.com.mx/wp-content/uploads/2020/05/aa4347e3-dacd-4383-8fe3-3a0ed515c205.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.container-img .thumb img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/teacher.css">
+    <title>Materias | Portal FIF UAQ</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <nav class="menu">
+            <div class="thumb">
+                <img src="http://seeklogo.com/images/U/Universidad_Autonoma_de_Queretaro-logo-8071A9801E-seeklogo.com.png"
+                    alt="Logo UAQ">
+                <img src="https://sg.com.mx/sites/default/files/images/stories/img_info.png" alt="Logo FIF UAQ">
+            </div>
+            <ul>
+                <a href="#">
+                    <li>Inicio</li>
+                </a>
+                <a href="#">
+                    <li>Mis datos</li>
+                </a>
+                <a href="#">
+                    <li>Historial</li>
+                </a>
+                <a href="#">
+                    <li>Confirmación Materias</li>
+                </a>
+                <a href="#">
+                    <li>Evaluación Docente</li>
+                </a>
+            </ul>
+
+            <a href="#" class="btn-inline">Cerrar sesión</a>
+        </nav>
+
+        <div class="container">
+            <h4>Materias asignadas: Agosto-Diciembre/2023</h4>
+            <section class="tabla-horario" id="barMat">
+                <table id="subjects">
+                    <thead>
+                        <tr>
+                            <th> Código </th>
+                            <th> Materia </th>
+                            <th> Grupo </th>
+                            <th> Aula </th>
+                            <th> Hora </th>
+                            <!-- <th> Día </th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <td id="ghost"></td>
+                    </tbody>
+                </table>
+                <button class="btn" id="btn-submit">Confirmar</button>
+            </section>
+        </div>
+    </main>
+
+    <!-- <footer>
+
+    </footer> -->
+
+    <div class="modal" id="modal">
+        <h3 id="nombreMatModal">Nombre materia</h3>
+        <span id="claveMatModal">Clave materia</span>
+        <span id="creditosMatModal">Créditos</span>
+
+        <div class="horarios">
+            <div id="1" class="horario">
+                <p class="profesor">Martin</p>
+                <p class="hora">13:00</p>
+                <p class="salon">D07</p>
+                <p class="grupo">30</p>
+                <button class="btn-select">Seleccionar</button>
+            </div>
+
+            <div id="1" class="horario">
+                <p class="profesor">Juan</p>
+                <p class="hora">11:00</p>
+                <p class="salon">D06</p>
+                <p class="grupo">37</p>
+                <button class="btn-select">Seleccionar</button>
+            </div>
+        </div>
+
+        <button id="btn-close" class="btn-modal">X</button>
+    </div>
+
+    <script src="../scripts/teacher.js"></script>
+</body>
+
+</html>
