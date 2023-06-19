@@ -192,6 +192,7 @@ main {
     overflow: hidden;
     top: 0;
     transform: translate(125%, 50%);
+    display: none;
 }
 
 .modal h3 {
