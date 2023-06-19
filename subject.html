@@ -15,31 +15,47 @@
     <main>
         <nav class="menu">
             <div class="thumb">
-                <img src="http://seeklogo.com/images/U/Universidad_Autonoma_de_Queretaro-logo-8071A9801E-seeklogo.com.png" alt="Logo UAQ">
+                <img src="http://seeklogo.com/images/U/Universidad_Autonoma_de_Queretaro-logo-8071A9801E-seeklogo.com.png"
+                    alt="Logo UAQ">
                 <img src="https://sg.com.mx/sites/default/files/images/stories/img_info.png" alt="Logo FIF UAQ">
             </div>
             <ul>
-                <a href="#"><li>Inicio</li></a>
-                <a href="#"><li>Mis datos</li></a>
-                <a href="#"><li>Historial</li></a>
-                <a href="#"><li>Reinscripción</li></a>
-                <a href="#"><li>Calificaciones</li></a>
-                <a href="#"><li>Pagos</li></a>
+                <a href="#">
+                    <li>Inicio</li>
+                </a>
+                <a href="#">
+                    <li>Mis datos</li>
+                </a>
+                <a href="#">
+                    <li>Historial</li>
+                </a>
+                <a href="#">
+                    <li>Reinscripción</li>
+                </a>
+                <a href="#">
+                    <li>Calificaciones</li>
+                </a>
+                <a href="#">
+                    <li>Pagos</li>
+                </a>
             </ul>
 
             <a href="#" class="btn-inline">Cerrar sesión</a>
         </nav>
 
         <div class="container">
+            <h4>Selección de materias: Agosto-Diciembre/2023</h4>
             <section class="tabla-horario" id="barMat">
                 <table id="subjects">
                     <thead>
                         <tr>
                             <th> Código </th>
                             <th> Materia </th>
-                            <th> Hora </th>
-                            <th> Aula </th>
+                            <th> Profesor </th>
                             <th> Grupo </th>
+                            <th> Aula </th>
+                            <th> Hora </th>
+                            <!-- <th> Día </th> -->
                             <th> Acciones </th>
                         </tr>
                     </thead>
@@ -47,341 +63,343 @@
                         <td id="ghost"></td>
                     </tbody>
                 </table>
-                <button id="btn-submit">Generar inscripción</button>
+                <button class="btn" id="btn-submit">Generar inscripción</button>
             </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 1</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2001">
-                        <p> Adminsitración </p>
-                        <p> 2001 </p>
-                    </button>
-                    <button class="subj" id="2002">
-                        <p> Introducción a las Tecnologías de la información </p>
-                        <p> 2002 </p>
-                    </button>
-                    <button class="subj" id="2005">
-                        <p> Introducción a la programación </p>
-                        <p> 2005 </p>
-                    </button>
-                    <button class="subj" id="2004">
-                        <p> Matemáticas computacionales </p>
-                        <p> 2004 </p>
-                    </button>
-                    <button class="subj" id="2003">
-                        <p> Etica y legislación informática </p>
-                        <p> 2003 </p>
-                    </button>
-                    <button class="subj" id="2006">
-                        <p> Desarrollo Humano I </p>
-                        <p> 2006 </p>
-                    </button>
-                    <button class="subj" id="2007">
-                        <p> Introducción a la investigación </p>
-                        <p> 2007 </p>
-                    </button>
-                    <button class="subj" id="2008">
-                        <p> Deportes 1 </p>
-                        <p> 2008 </p>
-                    </button>
-            </section>
+            <div class="container-semestres">
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 1</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2001">
+                            <p> Adminsitración </p>
+                            <p> 2001 </p>
+                        </button>
+                        <button class="subj" id="2002">
+                            <p> Introducción a las Tecnologías de la información </p>
+                            <p> 2002 </p>
+                        </button>
+                        <button class="subj" id="2005">
+                            <p> Introducción a la programación </p>
+                            <p> 2005 </p>
+                        </button>
+                        <button class="subj" id="2004">
+                            <p> Matemáticas computacionales </p>
+                            <p> 2004 </p>
+                        </button>
+                        <button class="subj" id="2003">
+                            <p> Etica y legislación informática </p>
+                            <p> 2003 </p>
+                        </button>
+                        <button class="subj" id="2006">
+                            <p> Desarrollo Humano I </p>
+                            <p> 2006 </p>
+                        </button>
+                        <button class="subj" id="2007">
+                            <p> Introducción a la investigación </p>
+                            <p> 2007 </p>
+                        </button>
+                        <button class="subj" id="2008">
+                            <p> Deportes 1 </p>
+                            <p> 2008 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 2</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 2</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 3</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 3</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 4</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 4</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 5</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 5</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 6</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 6</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 7</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 7</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 8</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 8</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
 
-            <section class="semestres" id="semestres">
-                <h3 class="title">Semestre 9</h3>
-                <div class="materias" id="materias">
-                    <button class="subj" id="2055">
-                        <p> Contabilidad Financiera </p>
-                        <p> 2055 </p>
-                    </button>
-                    <button class="subj" id="2056">
-                        <p> Principios de electrónica y circuitos logicos </p>
-                        <p> 2056 </p>
-                    </button>
-                    <button class="subj" id="2057">
-                        <p> Programación orientada a objetos </p>
-                        <p> 2057 </p>
-                    </button>
-                    <button class="subj" id="2012">
-                        <p> Algebra lineal </p>
-                        <p> 2012 </p>
-                    </button>
-                    <button class="subj" id="2009">
-                        <p> Diseño de interfaces de software </p>
-                        <p> 2009 </p>
-                    </button>
-                    <button class="subj" id="2014">
-                        <p> Desarrollo Humano II </p>
-                        <p> 2014 </p>
-                    </button>
-                    <button class="subj" id="2015">
-                        <p> Inglés I </p>
-                        <p> 2015 </p>
-                    </button>
-                    <button class="subj" id="2016">
-                        <p> Deportes II </p>
-                        <p> 2016 </p>
-                    </button>
-            </section>
+                <section class="semestres" id="semestres">
+                    <h4 class="title">Semestre 9</h4>
+                    <div class="materias" id="materias">
+                        <button class="subj" id="2055">
+                            <p> Contabilidad Financiera </p>
+                            <p> 2055 </p>
+                        </button>
+                        <button class="subj" id="2056">
+                            <p> Principios de electrónica y circuitos logicos </p>
+                            <p> 2056 </p>
+                        </button>
+                        <button class="subj" id="2057">
+                            <p> Programación orientada a objetos </p>
+                            <p> 2057 </p>
+                        </button>
+                        <button class="subj" id="2012">
+                            <p> Algebra lineal </p>
+                            <p> 2012 </p>
+                        </button>
+                        <button class="subj" id="2009">
+                            <p> Diseño de interfaces de software </p>
+                            <p> 2009 </p>
+                        </button>
+                        <button class="subj" id="2014">
+                            <p> Desarrollo Humano II </p>
+                            <p> 2014 </p>
+                        </button>
+                        <button class="subj" id="2015">
+                            <p> Inglés I </p>
+                            <p> 2015 </p>
+                        </button>
+                        <button class="subj" id="2016">
+                            <p> Deportes II </p>
+                            <p> 2016 </p>
+                        </button>
+                </section>
+            </div>
         </div>
     </main>
 
@@ -392,6 +410,7 @@
     <div class="modal" id="modal">
         <h3 id="nombreMatModal">Nombre materia</h3>
         <span id="claveMatModal">Clave materia</span>
+        <span id="creditosMatModal">Créditos</span>
 
         <div class="horarios">
             <div id="1" class="horario">
@@ -411,7 +430,7 @@
             </div>
         </div>
 
-        <button id="btn-close" class="btn">X</button>
+        <button id="btn-close" class="btn-modal">X</button>
     </div>
 
     <script src="subject.js"></script>

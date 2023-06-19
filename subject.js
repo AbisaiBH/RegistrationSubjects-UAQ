@@ -4,30 +4,35 @@ let modal = document.getElementById('modal');
 let closeBtn = document.getElementById('btn-close');
 let selectBtn = Array.from(document.getElementsByClassName('btn-select'));
 
+// ! Estos valores deben ser dinamicos con los datos de la BD
+let subjName, subjId, subjCredits;
+
 // ACTUALIZAR LA INFORMACION DE LAS OPCIONES DE MATERIAS
 // El objetivo es cargar correctamente las funciones asociadas cada que se actualizan las opciones
 function updateData() {
     let subjects = Array.from(document.getElementsByClassName('subj'));
+    console.log(subjects)
     subjects.forEach(subj => subj.addEventListener('click', e => {
-        let subjName = e.target.children[0].innerText;
-        window.subjName = subjName;
+        subjName = e.target.children[0].innerText;
+        subjId = e.target.getAttribute("id");
+        subjCredits = 10;
 
-        let subjId = e.target.getAttribute("id");
-        window.subjId = subjId;
-
-        openModal(subjName, subjId);
+        openModal();
     }))
 }
 // Enseguida se llama a la funcion para la primera vez que se ejecuta el JS
 updateData();
 
 // ABRIR EL MODAL CON LOS DETALLES DE LA MATERIA
-function openModal(subjName, subjId) {
+function openModal() {
     let subjNameModal = document.getElementById('nombreMatModal');
     let subjIdModal = document.getElementById('claveMatModal');
+    let subjCreditsModal = document.getElementById('creditosMatModal');
 
+    // No se necesitan como parametro, son var. globales
     subjNameModal.innerText = subjName;
     subjIdModal.innerText = subjId;
+    subjCreditsModal.innerText = subjCredits;
 
     modal.style.display = 'block';
 }
@@ -39,8 +44,9 @@ selectBtn.forEach(btn => {
         // Creacion del objeto de la materia
         // Se crea a partir de los detalles del modal
         let subject = {
-            id: window.subjId,
-            name: window.subjName,
+            id: subjId,
+            name: subjName,
+
             teacher: e.target.parentNode.children[0].innerText,
             hour: e.target.parentNode.children[1].innerText,
             classroom: e.target.parentNode.children[2].innerText,
@@ -104,9 +110,10 @@ function addNewRow(table, subject) {
     // Agregar cada celda
     insertCellTable(newSubjectRow, subject["id"]);
     insertCellTable(newSubjectRow, subject["name"]);
-    insertCellTable(newSubjectRow, subject["hour"]);
-    insertCellTable(newSubjectRow, subject["classroom"]);
+    insertCellTable(newSubjectRow, subject["teacher"]);
     insertCellTable(newSubjectRow, subject["group"]);
+    insertCellTable(newSubjectRow, subject["classroom"]);
+    insertCellTable(newSubjectRow, subject["hour"]);
 
     // Agregar nueva celda con las acciones (editar, borrar)
     insertActionsCell(subject, newSubjectRow);
@@ -124,21 +131,21 @@ function insertCellTable(newSubjectRow, subject) {
 // AGREGAR CELDA DE OPCIONES (EDITAR, BORRAR) EN LA MATERIA AGREGADA A LA TABLA
 function insertActionsCell(subject, newSubjectRow) {
     // Crear nueva celda
-    let actionsCell = newSubjectRow.insertCell(5);
+    let actionsCell = newSubjectRow.insertCell(-1);
 
     // Crear boton de 'Editar'
     let btnEdit = document.createElement('button');
     let editContent = document.createTextNode('Editar');
 
     btnEdit.appendChild(editContent);
-    btnEdit.setAttribute('class', 'btn-edit');
+    btnEdit.setAttribute('class', 'btn btn-edit');
 
     // Crear boton de 'Eliminar'
     let btnRemove = document.createElement('button');
     let removeContent = document.createTextNode('Quitar');
 
     btnRemove.appendChild(removeContent);
-    btnRemove.setAttribute('class', 'btn-remove');
+    btnRemove.setAttribute('class', 'btn btn-remove');
 
     // Agregar botones a la nueva celda
     actionsCell.appendChild(btnEdit);
@@ -203,6 +210,7 @@ function addSubjectNode(id, name) {
 
 // REMOVER MATERIA ESCOGIDA DE LAS OPCIONES DE MATERIAS
 function removeSubjectNode(id) {
+    //! Puede mejorarse al buscar solo en las materias del semestre y no en todas
     let subjects = Array.from(document.getElementsByClassName('materias'));
 
     // Buscar la materia en las opciones de materias
@@ -231,6 +239,6 @@ function showHideSubmit() {
     // Obtener # de filas de la tabla
     let rowsLength = table.rows.length;
 
-    if(rowsLength > 2) btnSubmit.style.display = 'block';
+    if (rowsLength > 2) btnSubmit.style.display = 'block';
     else btnSubmit.style.display = 'none';
 }
