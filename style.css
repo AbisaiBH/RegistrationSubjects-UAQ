@@ -81,6 +81,11 @@ button {
     width: 50%;
 }
 
+.btn-inline:hover {
+    background-color: transparent;
+    color: #114ea3;
+}
+
 .container-img {
     width: 60%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.535), rgba(0, 0, 0, 0.453)), url(https://inqro.com.mx/wp-content/uploads/2020/05/aa4347e3-dacd-4383-8fe3-3a0ed515c205.jpg);
