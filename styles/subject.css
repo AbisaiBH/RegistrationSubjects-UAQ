@@ -54,8 +54,8 @@ main {
 }
 
 .menu ul a:hover {
-        /* background-color: #f4f5f6; */
-        text-decoration: underline;
+    /* background-color: #f4f5f6; */
+    text-decoration: underline;
 }
 
 .menu ul a li {
@@ -115,6 +115,7 @@ main {
     height: 100px;
     width: 142px;
     border: 2px solid white;
+    background-color: #ededed;
 }
 
 .semestres .materias .subj p {
@@ -183,15 +184,26 @@ main {
     border: none;
 }
 
-.modal {
-    position: absolute;
-    background-color: #d8d8d8;
-    border: 1px solid black;
-    padding: 2.5rem;
-    text-align: center;
-    overflow: hidden;
+#overlay {
+    position: fixed;
     top: 0;
-    transform: translate(125%, 50%);
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(118, 118, 118, 0.5);
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 2rem;
+    text-align: center;
     display: none;
 }
 
@@ -199,14 +211,27 @@ main {
     margin: 0;
 }
 
-.modal > span {
+.modal>span {
     display: block;
 }
 
-.modal .btn {
+.modal .btn-modal {
     position: absolute;
     top: 15px;
     right: 15px;
+    border: none;
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.modal .btn-modal:hover {
+    background-color: rgb(243, 158, 0);
 }
 
 .modal .horarios {
@@ -225,6 +250,10 @@ main {
 
 .modal .horarios .horario>p {
     width: 100%;
+}
+
+.modal .horarios .horario .btn {
+    border: none;
 }
 
 #ghost {

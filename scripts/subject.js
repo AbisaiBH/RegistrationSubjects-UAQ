@@ -1,10 +1,11 @@
 console.clear();
 
 let modal = document.getElementById('modal');
+let overlay = document.getElementById('overlay');
 let closeBtn = document.getElementById('btn-close');
 let selectBtn = Array.from(document.getElementsByClassName('btn-select'));
 
-// ! Estos valores deben ser dinamicos con los datos de la BD
+// ! Estos valores deben ser dinamicos con los datos dxe la BD
 let subjName, subjId, subjCredits;
 
 // ACTUALIZAR LA INFORMACION DE LAS OPCIONES DE MATERIAS
@@ -34,6 +35,7 @@ function openModal() {
     subjIdModal.innerText = subjId;
     subjCreditsModal.innerText = subjCredits;
 
+    overlay.style.display = 'block';
     modal.style.display = 'block';
 }
 
@@ -228,6 +230,7 @@ closeBtn.addEventListener('click', () => {
 })
 
 function closeModal() {
+    overlay.style.display = 'none';
     modal.style.display = 'none';
 }
 
